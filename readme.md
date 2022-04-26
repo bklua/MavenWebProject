@@ -41,4 +41,13 @@ localhost:8081
 [tutorial](https://www.youtube.com/watch?v=meaD9y1RPNc)  
 
 ## Jenkins configuration ##  
-dashboard -> new item -> 
+dashboard -> new item -> maven project -> add github repo link  
+global tool configuration -> add java file path in JDK  
+global tool configuration -> add maven file path in maven  
+dashboard -> add plugin -> deploy to container plugin
+configure project -> post-build actions -> deploy war/ear to container -> target/*.war  
+containers -> tomcat credentials from  `/etc/tomcat9/tomcat-users.xml` ->tomcat9.x remote -> tomcat url  
+
+## Groovy file ##  
+start with maven template  
+use [this](https://www.jenkins.io/doc/pipeline/steps/sonar/) for sonarqube syntax
