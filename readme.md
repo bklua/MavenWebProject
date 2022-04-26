@@ -27,7 +27,7 @@ localhost:8082
 ## installing nexus ##  
 [starting nexus on localhost](https://ahgh.medium.com/how-to-setup-sonatype-nexus-3-repository-manager-using-docker-7ff89bc311ce)  
 `docker pull sonatype/nexus`  
-`docker run -d -p 8082:8082 --name nexus sonatype/nexus3`
+`docker run -d -p 8081:8081 --name nexus sonatype/nexus3`
 `docker ps`
 `docker container exec nexus cat nexus-data/admin.password`  
 localhost:8081  
@@ -49,7 +49,8 @@ configure project -> post-build actions -> deploy war/ear to container -> target
 containers -> tomcat credentials from  `/etc/tomcat9/tomcat-users.xml` ->tomcat9.x remote -> tomcat url  
 
 ## Groovy file ##  
-start with maven template  
+Start with maven template  
+Use the Jenkins Snippte Generator to mimic some of the plugins (sonarqube,nexus artifact uploader, deploy to container(for tomcat9))  
 use [this](https://www.jenkins.io/doc/pipeline/steps/sonar/) for sonarqube syntax [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/sonar/)  
 use [this](https://www.youtube.com/watch?v=ftTjxztcT14) for pushing to nexus3 repo [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/nexus-artifact-uploader/)  
-use jenkins snippet generator for deploying into conatiner (tomcat9) [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/deploy/#deploy-deploy-warear-to-a-container)  
+use jenkins snippet generator for deploying into container (tomcat9) [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/deploy/#deploy-deploy-warear-to-a-container)  
