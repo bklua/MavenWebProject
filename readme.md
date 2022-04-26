@@ -52,6 +52,7 @@ configure project -> post-build actions -> deploy war/ear to container -> target
 containers -> tomcat credentials from  `/etc/tomcat9/tomcat-users.xml` ->tomcat9.x remote -> tomcat url  
 
 ## Groovy file ##  
+Create new pipeline (different from the maven project above)
 Start with maven template  
 Use the Jenkins Snippte Generator to mimic some of the plugins (sonarqube,nexus artifact uploader, deploy to container(for tomcat9))  
 For Sonarqube syntax, use [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/sonar/)  
