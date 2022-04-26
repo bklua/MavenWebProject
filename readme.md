@@ -66,3 +66,7 @@ Groovy file can be found [here](https://github.com/jasonltr/KCMavenWebProject/bl
 ![sonarqube](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/Sonarqube%20success.png)  
 ![nexus3](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/nexus3%20success.png)  
 ![tomcat9](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/tomcat9%20success.png)  
+
+### main tutorials followed ###
+[Video1](https://www.youtube.com/watch?v=XSgs0VBEI8c)  
+[Video2](https://www.youtube.com/watch?v=meaD9y1RPNc)  
