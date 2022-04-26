@@ -50,4 +50,6 @@ containers -> tomcat credentials from  `/etc/tomcat9/tomcat-users.xml` ->tomcat9
 
 ## Groovy file ##  
 start with maven template  
-use [this](https://www.jenkins.io/doc/pipeline/steps/sonar/) for sonarqube syntax
+use [this](https://www.jenkins.io/doc/pipeline/steps/sonar/) for sonarqube syntax [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/sonar/)  
+use [this](https://www.youtube.com/watch?v=ftTjxztcT14) for pushing to nexus3 repo [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/nexus-artifact-uploader/)  
+use jenkins snippet generator for deploying into conatiner (tomcat9) [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/deploy/#deploy-deploy-warear-to-a-container)  
