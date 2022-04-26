@@ -1,3 +1,5 @@
+![alt text](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/Screenshot%20from%202022-04-25%2015-06-51.png)
+  
 ## installing jenkins ##  
 [guide to install jenkins](https://www.jenkins.io/doc/book/installing/linux/)  
 `java -version` to check java version  
