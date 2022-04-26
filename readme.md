@@ -34,6 +34,7 @@ localhost:8082
 `docker ps`
 `docker container exec nexus cat nexus-data/admin.password`  
 localhost:8081  
+created maven2(hosted) repo name:testmaven-snapshot  
 
 ## install maven ##  
 `sudo apt update`  
@@ -47,7 +48,7 @@ localhost:8081
 dashboard -> new item -> maven project -> add github repo link  
 global tool configuration -> add java file path in JDK  
 global tool configuration -> add maven file path in maven  
-dashboard -> add plugin -> deploy to container plugin
+dashboard -> add plugin -> deploy to container plugin (for tomcat9)
 configure project -> post-build actions -> deploy war/ear to container -> target/*.war  
 containers -> tomcat credentials from  `/etc/tomcat9/tomcat-users.xml` ->tomcat9.x remote -> tomcat url  
 
