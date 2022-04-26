@@ -1,9 +1,5 @@
 ### Assignment ###  
-![alt text](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/Screenshot%20from%202022-04-25%2015-06-51.png)
-  
-### Output ###  
-![alt text](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/pipeline%20success.jpg)  
-
+![alt text](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/Screenshot%20from%202022-04-25%2015-06-51.png)  
 
 ## installing jenkins ##  
 [guide to install jenkins](https://www.jenkins.io/doc/book/installing/linux/)  
@@ -61,3 +57,9 @@ Use the Jenkins Snippte Generator to mimic some of the plugins (sonarqube,nexus 
 for sonarqube syntax, use [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/sonar/)  
 use [this](https://www.youtube.com/watch?v=ftTjxztcT14) for pushing to nexus3 repo [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/nexus-artifact-uploader/)  
 use jenkins snippet generator for deploying into container (tomcat9) [Jenkins Doc](https://www.jenkins.io/doc/pipeline/steps/deploy/#deploy-deploy-warear-to-a-container)  
+
+### Output ###  
+![pipeline](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/pipeline%20success.jpg)  
+![sonarqube](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/Sonarqube%20success.png)  
+![nexus3](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/nexus3%20success.png)  
+![tomcat9](https://github.com/jasonltr/KCMavenWebProject/blob/master/Images/tomcat9%20success.png)  
