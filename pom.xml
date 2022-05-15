@@ -81,12 +81,12 @@
         <repository>
           <id>nexus</id>
           <name>KC Tech Releases Nexus Repository</name>
-          <url>http://localhost:8081/repository/testmaven-release/</url>
+          <url>http://localhost:8081/repository/kcmaven-release/</url>
         </repository>
         <snapshotRepository>
           <id>nexus</id>
           <name>KC Tech Snapshot Nexus Repository </name>
-           <url>http://localhost:8081/repository/testmaven-snapshot/</url>
+           <url>http://localhost:8081/repository/kcmaven-snapshot/</url>
         </snapshotRepository>
    </distributionManagement> -->
 	
@@ -97,7 +97,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <sonar.host.url>http://34.238.239.79:9000/</sonar.host.url>
+                <sonar.host.url>http://192.168.1.12:9000/</sonar.host.url>
 				<sonar-maven-plugin.version>3.3.0.603</sonar-maven-plugin.version>
             </properties>
             <build>
