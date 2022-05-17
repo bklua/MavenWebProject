@@ -14,7 +14,7 @@ pipeline {
         stage("Clone code from GitHub") {
             steps {
                 script {
-                    git branch: 'master', url: 'https://github.com/AlwPNewbie/KCMavenWebProject.git';
+                    git branch: 'master', url: 'https://github.com/AlwPNewbie/MavenWebProject.git';
                 }
             }
         }
