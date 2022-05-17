@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    tools {
+        maven "M2_HOME"
+    }
+    environment {
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "192.168.100.81:8081"
+        NEXUS_REPOSITORY = "kcmaven-release"
+        NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
+    }
+    stages {
+        stage("Clone code from GitHub") {
+            steps {
+                script {
+                    git branch: 'master', url: 'https://github.com/AlwPNewbie/KCMavenWebProject.git';
+                }
+            }
+        }
+        stage('Sonarqube scan'){
+            steps{
+                withSonarQubeEnv('SonarQubeServer'){
+                    sh 'mvn clean package sonar:sonar'
+                }
+            }
+        }
+        stage('deploy to tomcat'){
+            steps{
+                deploy adapters: [tomcat9(credentialsId: 'Tomcat-Credential', path: '', url: 'http://192.168.56.1:8085/')], contextPath: 'myapp', war: 'target/*.war'
+            }
+        }
+        stage("Publish to Nexus Repository Manager") {
+            steps {
+                nexusArtifactUploader artifacts: [[artifactId: '${POM_ARTIFACTID}', classifier: '', file: '/var/jenkins_home/workspace/SonarQube Project/target/maven-web-project-1.0-SNAPSHOT.war', type: '${POM_PACKAGING}']], credentialsId: 'NEXUS_TOKEN', groupId: '${POM_GROUPID}', nexusUrl: '192.168.56.1:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'kcmaven-release', version: '${POM_VERSION}'
+            }
+        }
+    }
+}
