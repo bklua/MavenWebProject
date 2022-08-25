@@ -77,7 +77,7 @@
 			<version>${spring.version}</version>
 		</dependency>
   </dependencies>
-    <distributionManagement>
+   <distributionManagement>
         <repository>
           <id>nexus</id>
           <name>KC Tech Releases Nexus Repository</name>
