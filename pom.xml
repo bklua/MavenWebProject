@@ -13,15 +13,16 @@
 	    <spring.version>4.1.4.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
+	 	<sonar.host.url>http://localhost:9001/</sonar.host.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
      	<!-- Sonar -->
     	<!-- The destination file for the code coverage report has to be set to the same value
          in the parent pom and in each module pom. Then JaCoCo will add up information in
-         the same report, so that, it will give the cross-module code coverage.
+         the same report, so that, it will give the cross-module code coverage. -->
      	<sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
-        <sonar.groovy.binaries>target/classes</sonar.groovy.binaries> -->
+        <sonar.groovy.binaries>target/classes</sonar.groovy.binaries>
   </properties>
 	
   <dependencies>
@@ -76,16 +77,16 @@
 			<version>${spring.version}</version>
 		</dependency>
   </dependencies>
-    <distributionManagement>
+<!--    <distributionManagement>
         <repository>
           <id>nexus</id>
           <name>KC Tech Releases Nexus Repository</name>
-          <url>http://44.208.167.255:8081/repository/maven-releases/</url>
+          <url>http://localhost:8081/repository/testmaven-release/</url>
         </repository>
         <snapshotRepository>
           <id>nexus</id>
           <name>KC Tech Snapshot Nexus Repository </name>
-           <url>http://44.208.167.255:8081/repository/mvMavenSnapshot/</url>
+           <url>http://localhost:8081/repository/testmaven-snapshot/</url>
         </snapshotRepository>
    </distributionManagement> -->
 	
@@ -96,7 +97,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <sonar.host.url>http://192.168.56.1:9000/</sonar.host.url>
+                <sonar.host.url>http://34.238.239.79:9000/</sonar.host.url>
 				<sonar-maven-plugin.version>3.3.0.603</sonar-maven-plugin.version>
             </properties>
             <build>
